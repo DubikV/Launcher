@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="false"
+    android:id="@+id/item_layout_del">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="@dimen/size_width_icon_app"
+        android:layout_height="@dimen/size_height_icon_app"
+        android:padding="@dimen/one_dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        tools:src="@drawable/ic_no_icon_aplication"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/one_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/one_dp"
+            android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:minHeight="@dimen/size_text_minHeight"
+            android:text="@string/text_name_app"
+            android:textSize="@dimen/size_text_apps"
+            android:textStyle="bold"
+            tools:text="Application Name"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite" />
+        <ImageView
+            android:id="@+id/app_icon_del"
+            android:layout_width="@dimen/size_small_icon"
+            android:layout_height="@dimen/size_small_icon"
+            android:padding="@dimen/one_dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            android:layout_weight="0.5"
+            tools:src="@android:drawable/ic_delete"
+            android:visibility="visible" />/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/app_package"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:minHeight="@dimen/size_text_minHeight"
+            android:text="@string/text_name_package"
+            android:textSize="@dimen/size_text_apps"
+            tools:text="app.package.name"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gmail.vanyadubik.Launcher.MainActivity"
+    android:background="@color/colorDark"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:background="@color/colorDark"
+        android:inputType="none"
+        android:textColor="@color/colorWhite" />
+
+    <fragment
+        android:name="com.gmail.vanyadubik.Launcher.Fragment_Table"
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/colorDark"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/edit"
+        android:layout_above="@+id/l_buttons"/>
+
+
+    <LinearLayout
+        android:id="@+id/l_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/colorDark"
+        android:layout_height="50dp"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:focusableInTouchMode="false">
+
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_button"
+            android:layout_margin="@dimen/line_width_big"
+            android:layout_weight="0.35"
+            android:onClick="onClickCall"
+            android:clickable="true"
+            android:padding="@dimen/line_width_big"
+            android:src="@android:drawable/ic_menu_call">
+
+        </ImageButton>
+
+
+        <Button
+            android:id="@+id/apps"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_button"
+            android:layout_margin="@dimen/line_width_big"
+            android:layout_weight="0.3"
+            android:onClick="clicAllApps"
+            android:clickable="true"
+            android:padding="@dimen/line_width_big"
+            android:text="@string/applications"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_button_size">
+
+        </Button>
+
+
+        <ImageButton
+            android:id="@+id/sms"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_button"
+            android:layout_margin="@dimen/line_width_big"
+            android:layout_weight="0.35"
+            android:onClick="onClickSms"
+            android:padding="@dimen/line_width_big"
+            android:src="@android:drawable/ic_menu_edit"
+            android:text="sms">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
